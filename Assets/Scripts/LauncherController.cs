@@ -6,6 +6,9 @@ public class LauncherController : MonoBehaviour
 {
     public Camera MainCamera;
     public GameObject LauncherBase;
+    public GameObject BirdiePrefab;
+    public float BirdieForce;
+
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +29,13 @@ public class LauncherController : MonoBehaviour
                 LauncherBase.transform.localEulerAngles.y,
                 Mathf.Atan2((worldPosition.y - LauncherBase.transform.position.y), (worldPosition.x - LauncherBase.transform.position.x)) * Mathf.Rad2Deg
             );
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            GameObject birdieInstance = Instantiate(BirdiePrefab);
+            birdieInstance.transform.position = LauncherBase.transform.position + LauncherBase.transform.right * 1.5f;
+            birdieInstance.GetComponent<Rigidbody>().AddForce(LauncherBase.transform.right * BirdieForce);
         }
     }
 }

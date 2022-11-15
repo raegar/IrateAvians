@@ -154,6 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 963194227}
   LauncherBase: {fileID: 1134003947}
+  BirdiePrefab: {fileID: 4500872585253387799, guid: 1076b94d60041a04f9083baa9efaf7ab, type: 3}
+  BirdieForce: 750
 --- !u!4 &15744999
 Transform:
   m_ObjectHideFlags: 0
@@ -381,7 +383,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0f9f5a49c325b2e4296a3ace711c553b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -762,7 +764,7 @@ Transform:
   m_GameObject: {fileID: 1529624627}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.69, y: 0, z: 0}
-  m_LocalScale: {x: 0.72832036, y: 0.515625, z: 0.515625}
+  m_LocalScale: {x: 0.85, y: 0.60176986, z: 0.60176986}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1134003948}
