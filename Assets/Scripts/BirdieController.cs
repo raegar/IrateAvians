@@ -7,12 +7,15 @@ public class BirdieController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (this.transform.position.y < -6f)
+        {
+            GameObject.Destroy(this.gameObject);
+        }
     }
 }

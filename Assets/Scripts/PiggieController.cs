@@ -2,8 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PiggieController : MonoBehaviour
 {
+
+    public delegate void OnPiggieDestroyAction();
+    public OnPiggieDestroyAction OnPiggieDestroyed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +39,11 @@ public class PiggieController : MonoBehaviour
         if (this.GetComponent<Rigidbody>().velocity.magnitude > 1.0f)
         {
             GameObject.Destroy(this.gameObject);
+
+            if (OnPiggieDestroyed != null)
+            {
+                OnPiggieDestroyed();
+            }
         }
     }
 }

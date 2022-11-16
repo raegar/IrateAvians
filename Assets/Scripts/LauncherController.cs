@@ -9,7 +9,7 @@ public class LauncherController : MonoBehaviour
     public GameObject BirdiePrefab;
     public float MaxBirdieForce = 1000f;
 
-    public float launcherForce = 100f;
+    public float LauncherForce = 100f;
 
 
     // Start is called before the first frame update
@@ -35,16 +35,16 @@ public class LauncherController : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            launcherForce += 1f;
-            launcherForce = Mathf.Clamp(launcherForce, 100f, MaxBirdieForce);
+            LauncherForce += 1f;
+            LauncherForce = Mathf.Clamp(LauncherForce, 100f, MaxBirdieForce);
         }
 
         if (Input.GetMouseButtonUp(0))
         {
             GameObject birdieInstance = Instantiate(BirdiePrefab);
             birdieInstance.transform.position = LauncherBase.transform.position + LauncherBase.transform.right * 1.5f;
-            birdieInstance.GetComponent<Rigidbody>().AddForce(LauncherBase.transform.right * launcherForce);
-            launcherForce = 100f;
+            birdieInstance.GetComponent<Rigidbody>().AddForce(LauncherBase.transform.right * LauncherForce);
+            LauncherForce = 100f;
         }
 
 
