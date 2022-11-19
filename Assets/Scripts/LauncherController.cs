@@ -35,7 +35,7 @@ public class LauncherController : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            LauncherForce += 1f;
+            LauncherForce += 2f;
             LauncherForce = Mathf.Clamp(LauncherForce, 100f, MaxBirdieForce);
         }
 
