@@ -39,6 +39,6 @@ public class GameSceneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PowerMeterText.text = "Launcher Power: " + Launcher.LauncherForce;
+        PowerMeterText.text = "Cannon Power: " + Launcher.LauncherForce;
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5048042204615423051}
   - component: {fileID: 5048042204615423050}
   m_Layer: 0
-  m_Name: Obstacle
+  m_Name: Plank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,5 +112,5 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 40
+  m_Constraints: 8
   m_CollisionDetection: 0
