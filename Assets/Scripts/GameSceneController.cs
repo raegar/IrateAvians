@@ -63,7 +63,7 @@ public class GameSceneController : MonoBehaviour
         timer += Time.deltaTime;
         TimeText.text = $"Time: {timer.ToString("0.00")}";
         PowerMeterText.text = "Cannon Power: " + Launcher.LauncherForce;
-        BirdsRemaining.text = $"Birds available: {Launcher.birdsRemaining}";
+        BirdsRemaining.text = $"Birds avalable: {Launcher.birdsRemaining}";
 
         if (Input.GetKeyDown("r"))
         {
