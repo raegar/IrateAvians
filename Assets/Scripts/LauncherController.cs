@@ -11,6 +11,8 @@ public class LauncherController : MonoBehaviour
 
     public float LauncherForce = 100f;
 
+    public int birdsRemaining;
+
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +44,7 @@ public class LauncherController : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             GameObject birdieInstance = Instantiate(BirdiePrefab);
+            if (birdsRemaining >= 1) birdsRemaining -= 1;
             birdieInstance.transform.position = LauncherBase.transform.position + LauncherBase.transform.right * 1.5f;
             birdieInstance.GetComponent<Rigidbody>().AddForce(LauncherBase.transform.right * LauncherForce);
             LauncherForce = 100f;

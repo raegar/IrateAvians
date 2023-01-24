@@ -11,6 +11,7 @@ public class GameSceneController : MonoBehaviour
     public TextMeshProUGUI PowerMeterText;
     public TextMeshProUGUI ScoreText;
     public TextMeshProUGUI TimeText;
+    public TextMeshProUGUI BirdsRemaining;
     public GameObject PiggieContanier;
     public LauncherController Launcher;
     PiggieController[] piggies;
@@ -26,11 +27,11 @@ public class GameSceneController : MonoBehaviour
     {
         piggies = PiggieContanier.GetComponentsInChildren<PiggieController>();
         piggiesToDestroy = piggies.Length;
-        this.timer = ScoreManager.bestTime;
         foreach (PiggieController piggie in piggies)
         {
             piggie.OnPiggieDestroyed += PiggieDestroyed;
         }
+        Launcher.birdsRemaining = 10;
     }
 
     void PiggieDestroyed()
@@ -62,6 +63,7 @@ public class GameSceneController : MonoBehaviour
         timer += Time.deltaTime;
         TimeText.text = $"Time: {timer.ToString("0.00")}";
         PowerMeterText.text = "Cannon Power: " + Launcher.LauncherForce;
+        BirdsRemaining.text = $"Birds available: {Launcher.birdsRemaining}";
 
         if (Input.GetKeyDown("r"))
         {
