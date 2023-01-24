@@ -6,6 +6,6 @@ public class ScoreManager : MonoBehaviour
 {
 
     public int pointsScored = 0;
-
+    public float bestTime = 0f;
 
 }
