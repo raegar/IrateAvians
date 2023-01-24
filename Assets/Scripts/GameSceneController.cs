@@ -46,12 +46,12 @@ public class GameSceneController : MonoBehaviour
         {
             if (this.timer <= ScoreManager.bestTime)
             {
-                GameText.text = "You did it!\nPress R to restart";
+                GameText.text = "You did it!\nPress F to restart";
             }
             else
             {
                 ScoreManager.bestTime = this.timer;
-                GameText.text = $"You did it!\nNew Best Time: {ScoreManager.bestTime}! \nPress R to restart";
+                GameText.text = $"You did it!\nNew Best Time: {ScoreManager.bestTime}! \nPress F to restart";
             }
 
         }

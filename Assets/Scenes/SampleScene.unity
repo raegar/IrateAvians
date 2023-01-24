@@ -2694,7 +2694,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2572818343944193041, guid: 46c6bd9215b1e5c4faa9c054fad78012, type: 3}
       propertyPath: PointValue
-      value: 250
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: -2572818343944193041, guid: 46c6bd9215b1e5c4faa9c054fad78012, type: 3}
       propertyPath: ScoreManager
