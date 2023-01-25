@@ -12,6 +12,7 @@ public class GameSceneController : MonoBehaviour
     public TextMeshProUGUI ScoreText;
     public TextMeshProUGUI TimeText;
     public TextMeshProUGUI BirdsRemaining;
+    public Camera MainCamera;
     public GameObject PiggieContanier;
     public LauncherController Launcher;
     PiggieController[] piggies;
@@ -69,6 +70,13 @@ public class GameSceneController : MonoBehaviour
         {
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            return;
+        }
+
+        if (Input.GetKeyDown("f"))
+        {
+
+            MainCamera.clearFlags = CameraClearFlags.Nothing;
             return;
         }
 
