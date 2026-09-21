@@ -29,7 +29,7 @@ public class PiggieController : MonoBehaviour
     {
 
         //Destroy piggie based on force applied
-        if (this.GetComponent<Rigidbody>().velocity.magnitude > 0.8f)
+        if (this.GetComponent<Rigidbody>().linearVelocity.magnitude > 0.8f)
         {
             ScoreManager.pointsScored = PointValue;
             GameObject.Destroy(this.gameObject);
